@@ -1,0 +1,38 @@
++media(any)
+
+  *
+    outline: none
+
+  body
+    text-style: text.sans-body
+    background: #fff
+
+  a
+    color: colors.link
+    &:hover
+      text-decoration: none
+
+  body, html
+    height: 100%
+
+  .grid:before
+    content: ""
+    width: 1240px
+    margin: auto
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 99999
+    background: linear-gradient(left, rgba(255,0,0,.15) 74px, transparent 74px)
+    background-size: 106px
+    pointer-events: none
+    +media(mq.desktop)
+      width: 930px
+      background: linear-gradient(left, rgba(255,0,0,.15) 50px, transparent 50px)
+      background-size: 80px
+    +media(mq.tablet)
+      width: 720px
+      background: linear-gradient(left, rgba(255,0,0,.15) 38px, transparent 38px)
+      background-size: 62px
