@@ -365,7 +365,7 @@ body {
 }
 
 a {
-  color: #197db7;
+  color: #0fb7ff;
 }
 
 a:hover {
@@ -377,9 +377,13 @@ html {
   height: 100%;
 }
 
+.wrapper {
+  min-height: 100%;
+}
+
 .grid:before {
   content: "";
-  width: 1240px;
+  width: 1350px;
   margin: auto;
   position: fixed;
   top: 0;
@@ -387,15 +391,22 @@ html {
   left: 0;
   right: 0;
   z-index: 99999;
-  background: -webkit-linear-gradient(left, rgba(255,0,0,0.15) 74px, transparent 74px);
-  background: -moz-linear-gradient(left, rgba(255,0,0,0.15) 74px, transparent 74px);
-  background: -o-linear-gradient(left, rgba(255,0,0,0.15) 74px, transparent 74px);
-  background: -ms-linear-gradient(left, rgba(255,0,0,0.15) 74px, transparent 74px);
-  background: linear-gradient(to right, rgba(255,0,0,0.15) 74px, transparent 74px);
-  -webkit-background-size: 106px;
-  -moz-background-size: 106px;
-  background-size: 106px;
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.1) 85px, transparent 85px);
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.1) 85px, transparent 85px);
+  background: -o-linear-gradient(left, rgba(0,0,0,0.1) 85px, transparent 85px);
+  background: -ms-linear-gradient(left, rgba(0,0,0,0.1) 85px, transparent 85px);
+  background: linear-gradient(to right, rgba(0,0,0,0.1) 85px, transparent 85px);
+  -webkit-background-size: 115px;
+  -moz-background-size: 115px;
+  background-size: 115px;
   pointer-events: none;
+}
+
+.page {
+  width: 1350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
 #colorbox,
@@ -1203,30 +1214,87 @@ button.swiper-pagination-bullet {
   }
 }
 
+.push {
+  height: 200px;
+}
+
+.foot {
+  height: 200px;
+  background: #f6f6f6;
+  margin-top: -200px;
+}
+
+@media screen and (max-width: 1400px) {
+  .grid:before {
+    width: 1170px;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.1) 70px, transparent 70px);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.1) 70px, transparent 70px);
+    background: -o-linear-gradient(left, rgba(0,0,0,0.1) 70px, transparent 70px);
+    background: -ms-linear-gradient(left, rgba(0,0,0,0.1) 70px, transparent 70px);
+    background: linear-gradient(to right, rgba(0,0,0,0.1) 70px, transparent 70px);
+    -webkit-background-size: 100px;
+    -moz-background-size: 100px;
+    background-size: 100px;
+  }
+
+  .page {
+    width: 1170px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .grid:before {
-    width: 930px;
-    background: -webkit-linear-gradient(left, rgba(255,0,0,0.15) 50px, transparent 50px);
-    background: -moz-linear-gradient(left, rgba(255,0,0,0.15) 50px, transparent 50px);
-    background: -o-linear-gradient(left, rgba(255,0,0,0.15) 50px, transparent 50px);
-    background: -ms-linear-gradient(left, rgba(255,0,0,0.15) 50px, transparent 50px);
-    background: linear-gradient(to right, rgba(255,0,0,0.15) 50px, transparent 50px);
+    width: 940px;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.1) 60px, transparent 60px);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.1) 60px, transparent 60px);
+    background: -o-linear-gradient(left, rgba(0,0,0,0.1) 60px, transparent 60px);
+    background: -ms-linear-gradient(left, rgba(0,0,0,0.1) 60px, transparent 60px);
+    background: linear-gradient(to right, rgba(0,0,0,0.1) 60px, transparent 60px);
     -webkit-background-size: 80px;
     -moz-background-size: 80px;
     background-size: 80px;
+  }
+
+  .page {
+    width: 940px;
   }
 }
 
 @media screen and (max-width: 980px) {
   .grid:before {
     width: 720px;
-    background: -webkit-linear-gradient(left, rgba(255,0,0,0.15) 38px, transparent 38px);
-    background: -moz-linear-gradient(left, rgba(255,0,0,0.15) 38px, transparent 38px);
-    background: -o-linear-gradient(left, rgba(255,0,0,0.15) 38px, transparent 38px);
-    background: -ms-linear-gradient(left, rgba(255,0,0,0.15) 38px, transparent 38px);
-    background: linear-gradient(to right, rgba(255,0,0,0.15) 38px, transparent 38px);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.1) 38px, transparent 38px);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.1) 38px, transparent 38px);
+    background: -o-linear-gradient(left, rgba(0,0,0,0.1) 38px, transparent 38px);
+    background: -ms-linear-gradient(left, rgba(0,0,0,0.1) 38px, transparent 38px);
+    background: linear-gradient(to right, rgba(0,0,0,0.1) 38px, transparent 38px);
     -webkit-background-size: 62px;
     -moz-background-size: 62px;
     background-size: 62px;
+  }
+
+  .page {
+    width: 720px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .grid:before {
+    width: 90%;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.1) 90%, transparent 90%);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.1) 90%, transparent 90%);
+    background: -o-linear-gradient(left, rgba(0,0,0,0.1) 90%, transparent 90%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,0.1) 90%, transparent 90%);
+    background: linear-gradient(to right, rgba(0,0,0,0.1) 90%, transparent 90%);
+    -webkit-background-size: 52.9%;
+    -moz-background-size: 52.9%;
+    background-size: 52.9%;
+  }
+
+  .page {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }

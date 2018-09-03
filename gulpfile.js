@@ -46,15 +46,12 @@ const js = entry => {
 gulp
   .task('default', [ 'build', 'watch' ])
   .task('build', [ 'build.css', 'build.js' ])
-  .task('build.css', [ 'build.css.admin', 'build.css.site' ])
-  .task('build.css.admin', css('src/css/admin/admin.styl'))
+  .task('build.css', [ 'build.css.site' ])
   .task('build.css.site', css('src/css/site.styl'))
-  .task('build.js', [ 'build.js.site', 'build.js.admin' ])
+  .task('build.js', [ 'build.js.site' ])
   .task('build.js.site', js('site'))
-  .task('build.js.admin', js('admin'))
   .task('watch', () => {
       watch('src/js/app/**/*.js',      e => gulp.start('build.js'))
-      watch('src/css/admin/**/*.styl', e => gulp.start('build.css.admin'))
       watch('src/css/**/*.styl',       e => gulp.start('build.css.site'))
   })
 
